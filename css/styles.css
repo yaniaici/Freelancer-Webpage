@@ -4,9 +4,12 @@
     --primario: #FFC107;
     --secundario: #0097A7;
     --gris: #757575;
+    --grisClaro: #e4e4e4;
     
 }
 
+
+/* Globales */
 html {
     font-size: 62.5%;           /* Box model */
     box-sizing: border-box;
@@ -19,8 +22,11 @@ html {
 body {
     font-size: 16px;           /* 1 rem = 10px */
     font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100% );
 }
 
+
+/* Tipografias */
 h1 {
     font-size: 3.8rem;
 }
@@ -36,6 +42,8 @@ h3 {
 h1, h2, h3 {
     text-align: center;
 }
+
+/* Titulos */
 
 .titulo span {
     font-size: 2rem;
@@ -66,6 +74,16 @@ h1, h2, h3 {
     
 }
 
+.sombra {
+    /* Moz: mozilla Webkit: Chrome */
+    box-shadow: 0px 5px 15px 0px rgba(171,171,171,0.53);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+
+/* Navegacion principal */
 .nav-bg {
     background-color: var(--secundario);
 }
@@ -78,7 +96,7 @@ h1, h2, h3 {
 @media (min-width: 768px) { 
     .navegacion-principal {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 }
 
@@ -97,12 +115,14 @@ h1, h2, h3 {
     color: var(--oscuro);
 }
 
+/* Hero */
 .hero {
     background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 41rem;
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .contenido-hero {
@@ -118,17 +138,49 @@ h1, h2, h3 {
     justify-content: center;
 }
 
-.contenido-hero h2 {
+.contenido-hero h2, .contenido-hero p {
     color: var(--blanco);
-}
-
-.contenido-hero p {
-    color: var(--blanco);
-    font-size: 1.7rem;
 }
 
 .ubicacion {
     display: flex;
     align-items: flex-end;
 }
+
+/** Servicios **/
+@media(min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 5rem;
+    }
+} 
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: normal;
+
+}
+
+.servicio p {
+    line-height: 2;
+    text-align: center;
+}
+
+.servicio .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 
