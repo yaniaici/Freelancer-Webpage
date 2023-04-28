@@ -124,47 +124,51 @@
             </p>
         </section>
      </div>
-    </main>
+   
 
     <section>
         <h2> Contacto </h2>
 
-        <form>
+        <form class="formulario">
             <fieldset>
                 <legend> Contáctame llenando los campos </legend>
 
-                <div>
+                <div class="contenedor-campos">
+
+                <div class="campo">
                     <label>Nombre</label>
-                    <input type="text" placeholder="Nombre">
+                    <input class="input-text" type="text" placeholder="Nombre">
                 </div>
 
-                <div>
+                <div class="campo">
                     <label>Numero de teléfono</label>
-                    <input type="tel" placeholder="Numero de teléfono">
+                    <input class="input-text" type="tel" placeholder="Numero de teléfono">
                 </div>
 
 
-                <div>
+                <div class="campo">
                     <label>Correo electrónico</label>
-                    <input type="email" placeholder="Correo electrónico">
+                    <input class="input-text" type="email" placeholder="Correo electrónico">
                 </div>
 
 
-                <div>
+                <div class="campo">
                     <label>Mensaje</label>
-                    <textarea placeholder="Mensaje"></textarea>
+                    <textarea class="input-text" placeholder="Mensaje"></textarea>
                 </div>  
+            </div> <!-- contenedor-campos-->
 
-                <div>
-                    <input type="submit" value="Enviar">
+                <div class="alinear-derecha flex">
+                    <input class="boton w-100" type="submit" value="Enviar">
                 </div>
 
             </fieldset>
         </form>
     </section>
+</main>
 
-    <footer>
-        <p>Todos los derechos reservados. Primiko el freelancer.</p>
+    <footer class="footer">
+        <p>Todos los derechos reservados. Yani Aici.</p>
     </footer>
 
 </body>
